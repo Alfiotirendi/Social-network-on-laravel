@@ -1,58 +1,75 @@
-ITALIANO
-FootballBook – Social Network multiprofilo in Laravel
+# FootballBook – Multi-user Social Network built with Laravel
 
-FootballBook è un social network realizzato con Laravel che permette agli utenti di registrarsi, autenticarsi, pubblicare post, seguire altri profili, mettere like ai post e visualizzare le informazioni degli altri utenti.
-Il progetto utilizza Laravel per la logica applicativa, Blade per il frontend e MySQL come database.
+FootballBook is a social network built with Laravel that allows users to register, log in, create posts, follow other users, like posts, and view detailed profile information.  
+The project uses Laravel for backend logic, Blade for the frontend, and MySQL as the database.
 
-Funzionalità principali
-Gestione utenti
+## Main Features
 
-Registrazione e login
+### User Management
+- User registration and login
+- Logout and session management
+- Personal profile page
+- View other users' profiles
+- Edit personal profile information
+- User search bar
 
-Logout e gestione delle sessioni
+### Posts
+- Create text posts
+- View personal posts
+- Feed with posts from followed users
+- Dedicated page with all posts from a specific profile
 
-Pagina profilo personale
+### Social Interactions
+- Post like system
+- Like counter
+- Follow/unfollow system
+- Personalized feed based on followed profiles
 
-Visualizzazione dei profili degli altri utenti
+## Technologies Used
+- Laravel 12
+- PHP 8.2
+- Blade Templates
+- MySQL
+- TailwindCSS (if used)
+- Eloquent ORM
 
-Modifica delle informazioni del proprio profilo
+## Installation and Setup
 
-Ricerca utenti tramite barra di ricerca
+1. Clone the repository:
+git clone https://github.com/your-username/footballbook.git
+cd footballbook
 
-Post
+2. Install dependencies:
+composer install
+npm install && npm run build
 
-Creazione di post testuali
+3. Copy the `.env` file and configure the database:
+cp .env.example .env
+# Set your database credentials inside `.env`:
+# DB_DATABASE=footballbook
+# DB_USERNAME=root
+# DB_PASSWORD=yourpassword
 
-Visualizzazione dei propri post
+4. Generate the application key:
+php artisan key:generate
 
-Feed dei post degli utenti seguiti
+5. Run migrations:
+php artisan migrate
 
-Pagina con tutti i post pubblicati da un singolo profilo
+6. Start the server:
+php artisan serve
 
-Interazioni social
+The project will be available at: http://localhost:8000
 
-Sistema di like ai post
+## Main Directory Structure
 
-Conteggio dei like
+app/
+  Models/              Eloquent models (User, Post, Like, Follow, ...)
+  Http/Controllers/    Main controllers
+resources/
+  views/               Blade templates
+routes/
+  web.php              Application routes
 
-Sistema follow/unfollow
-
-Feed personalizzato basato sugli utenti seguiti
-
-Tecnologie utilizzate
-
-Laravel 12
-
-PHP 8.2
-
-Blade Templates
-
-MySQL
-
-TailwindCSS (se utilizzato)
-
-Eloquent ORM
-
-Installazione e setup
-
-Clona il repository:
+## License
+This project is distributed under the MIT License.
