@@ -45,18 +45,19 @@ npm install && npm run build
 
 3. Copy the `.env` file and configure the database:
 cp .env.example .env
-# Set your database credentials inside `.env`:
-# DB_DATABASE=footballbook
-# DB_USERNAME=root
-# DB_PASSWORD=yourpassword
 
-4. Generate the application key:
+4. Set your database credentials inside `.env`:
+ DB_DATABASE=footballbook
+ DB_USERNAME=root
+ DB_PASSWORD=yourpassword
+
+5. Generate the application key:
 php artisan key:generate
 
-5. Run migrations:
+6. Run migrations:
 php artisan migrate
 
-6. Start the server:
+7. Start the server:
 php artisan serve
 
 The project will be available at: http://localhost:8000
